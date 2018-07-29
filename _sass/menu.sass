@@ -1,0 +1,288 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans)
+
+*
+  box-sizing: border-box
+
+.menu-shadow
+  box-shadow: 0 10px 6px -6px #777
+  -webkit-box-shadow: 0 10px 6px -6px #777
+  -moz-box-shadow: 0 10px 6px -6px #777
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500)
+
+.menu
+  font-family: 'Raleway', Arial, sans-serif
+  text-align: center
+  text-transform: uppercase
+  font-weight: 500
+  letter-spacing: 1px
+  background-color: white
+
+  *
+    -webkit-box-sizing: border-box
+    box-sizing: border-box
+    -webkit-transition: all 0.35s ease
+    transition: all 0.35s ease
+  li
+    display: inline-block
+    list-style: outside none none
+    margin: 0 1em
+    padding: 0
+  a
+    padding: 0.5em 0.8em
+    margin: 0.2em 0
+    display: block
+    color: rgba(255, 255, 255, 0.5)
+    position: relative
+    text-decoration: none
+    &:before, &:after
+      height: 14px
+      width: 14px
+      position: absolute
+      content: ''
+      -webkit-transition: all 0.35s ease
+      transition: all 0.35s ease
+      opacity: 0
+    &:before
+      left: 0
+      top: 0
+      border-left: 3px solid #83a1e2
+      border-top: 3px solid #83a1e2
+      -webkit-transform: translate(100%, 50%)
+      transform: translate(100%, 50%)
+    &:after
+      right: 0
+      bottom: 0
+      border-right: 3px solid #83a1e2
+      border-bottom: 3px solid #83a1e2
+      -webkit-transform: translate(-100%, -50%)
+      transform: translate(-100%, -50%)
+    &:hover
+      color: #ffffff
+  .current a
+    color: #ffffff
+  a:hover:before, .current a:before, a:hover:after, .current a:after
+    -webkit-transform: translate(0%, 0%)
+    transform: translate(0%, 0%)
+    opacity: 1
+  label
+    cursor: pointer
+  input
+    display: none
+
+
+
+//
+////-----------------------------------Definição principal------------------------------------------
+//.menu
+//  list-style: none
+//  margin: 0
+//  padding: 0
+//  width: 100%
+//  height: 80px
+//  position: relative
+//  background-color: #2c3e50
+//  z-index: 7
+//  box-shadow: 0 10px 6px -6px #777
+//  -webkit-box-shadow: 0 10px 6px -6px #777
+//  -moz-box-shadow: 0 10px 6px -6px #777
+//  margin-bottom: 40px
+//  ul
+//    list-style: none
+//    display: inline
+//
+//  li
+//    text-decoration: none
+//    float: left
+//    width: 10%
+//    height: 100%
+//    margin: 0
+//    padding: 0
+//    background-color: #2c3e50
+//
+//
+//  a
+//    display: -webkit-box
+//    display: -ms-flexbox
+//    display: flex
+//    width: 100%
+//    height: 100%
+//    -webkit-box-pack: center
+//    -ms-flex-pack: center
+//    justify-content: center
+//    -webkit-box-align: center
+//    -ms-flex-align: center
+//    align-items: center
+//    color: #fff
+//    text-decoration: none
+//    position: relative
+//    font-size: 18px
+//    z-index: 9
+//
+//  li.active
+//    background-color: #789be2
+//    pointer-events: none
+//
+//  li:hover
+//    background-color: #789be2
+//
+//
+//
+//
+//.logo a
+//  font-family: 'Titan One', cursive;
+//
+//
+//
+////------------------------------------------------------Menu mobile----------------------------------------------
+//
+//.show-menu
+//  text-decoration: none
+//  background: #2c3e50
+//  text-align: left
+//  padding: 20px 0px 0px 10px
+//  margin: 0
+//  height: 80px
+//  display: none
+//  color: white
+//  font-size: 18px
+//  font-family: 'Titan One', cursive;
+//  box-shadow: 0 10px 6px -6px #777
+//
+//
+//input[type=checkbox]
+//  display: none
+//
+//
+//input[type=checkbox]:checked ~ .menu
+//  display: block
+//
+//input[type=checkbox]:checked ~ .down-icon
+//  visibility: hidden
+//
+//
+//
+//.mobile-btn
+//  //float: right
+//  //font-size: 30px
+//  //color: #fff
+//  //padding: 0px 10px 20px 0px
+//  width: 60px
+//  height: 45px
+//  position: relative
+//  float: right
+//  margin-right: 10px
+//  -webkit-transform: rotate(0deg)
+//  -moz-transform: rotate(0deg)
+//  -o-transform: rotate(0deg)
+//  transform: rotate(0deg)
+//  -webkit-transition: .5s ease-in-out
+//  -moz-transition: .5s ease-in-out
+//  -o-transition: .5s ease-in-out
+//  transition: .5s ease-in-out
+//  cursor: pointer
+//  span
+//    &:nth-child(1)
+//      top: 0px
+//    &:nth-child(2)
+//      top: 18px
+//    &:nth-child(3)
+//      top: 36px
+//  &.open span
+//    &:nth-child(1)
+//      top: 18px
+//      -webkit-transform: rotate(135deg)
+//      -moz-transform: rotate(135deg)
+//      -o-transform: rotate(135deg)
+//      transform: rotate(135deg)
+//    &:nth-child(2)
+//      opacity: 0
+//      left: -60px
+//    &:nth-child(3)
+//      top: 18px
+//      -webkit-transform: rotate(-135deg)
+//      -moz-transform: rotate(-135deg)
+//      -o-transform: rotate(-135deg)
+//      transform: rotate(-135deg)
+//
+//
+//.mobile-btn span
+//  display: block
+//  position: absolute
+//  height: 9px
+//  width: 100%
+//  background: white
+//  border-radius: 9px
+//  opacity: 1
+//  left: 0
+//  -webkit-transform: rotate(0deg)
+//  -moz-transform: rotate(0deg)
+//  -o-transform: rotate(0deg)
+//  transform: rotate(0deg)
+//  -webkit-transition: .25s ease-in-out
+//  -moz-transition: .25s ease-in-out
+//  -o-transition: .25s ease-in-out
+//  transition: .25s ease-in-out
+//
+//@media (min-width: 769px)
+//  .mobile-btn
+//    visibility: hidden
+//  .mobile-text
+//    visibility: hidden
+//
+//@media(max-width: 768px)
+//  .menu
+//    display: none
+//
+//  .menu ul li
+//    float: none
+//    width: 100%
+//    border-top: solid 1px white
+//
+//  input[type=checkbox]
+//    visibility: visible
+//
+//  .show-menu
+//    display: block
+//
+//
+////----------------------------------------Botão de pesquisa-----------------------------------------------
+//.search-box
+//  position: absolute
+//  top: 50%
+//  left: 50%
+//  transform: translate(-50%, -50%)
+//  background: white
+//  height: 40px
+//  -webkit-border-radius: 40px
+//  -moz-border-radius: 40px
+//  border-radius: 40px
+//  padding: 10px
+//
+//.search-box:hover > .search-txt
+//  width: 240px
+//  padding: 0 4px
+//
+//.search-btn
+//  color: #e74c3c
+//  float: right
+//  width: 40px
+//  height: 40px
+//  border-radius: 50%
+//  background: #e74c3c
+//  display: flex
+//  justify-content: center
+//  align-items: center
+//
+//.search-txt
+//  background: none
+//  border: none
+//  outline: none
+//  float: left
+//  padding: 0
+//  color: #2c3e50
+//  font-size: 16px
+//  transition: 0.4s
+//  line-height: 40px
+//  width: 0px
+//

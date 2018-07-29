@@ -1,0 +1,40 @@
+---
+layout: default
+permalink: /blog/
+title: Blog
+type: blog
+---
+
+
+
+<div class="container">
+    <div class="row"></div>
+</div>
+<div class="container" id="info-container">
+    <div class="row">
+        <div class="col-md-12">
+            {% for post in site.posts%}
+                <figure class="snip1253">
+                    <div class="image"><img src="{{ post.image | prepend: '/assets/img/' relative_url }}"/></div>
+                    <figcaption>
+                        <div class="date"><span class="day">{{post.date | date: "%-d"}}</span><span class="month">{{post.date | date: "%-b"}}</span></div>
+                        <h3>{{post.title}}</h3>
+                        <p>
+                            {{post.content | truncate: 200}}
+
+                        </p>
+
+                    </figcaption>
+                    <footer>
+                        <!--<div class="views"><i class="ion-eye"></i>928</div>
+                        <div class="comments"><i class="ion-chatboxes"></i>0 </div>-->
+                        <a href="{{post.url | prepend: site.baseurl}}"></a>
+                    </footer>
+                </figure>
+
+
+            {% endfor %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>

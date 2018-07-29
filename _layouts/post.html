@@ -1,0 +1,202 @@
+---
+layout: default
+comments: true
+---
+
+<div style="background-image:url(&quot;{{'/assets/img/' | append: page.coverImage relative_url }}&quot;);height:500px;background-position:center;background-size:cover;background-repeat:no-repeat;">
+    <div class="d-flex justify-content-center align-items-center" style="height:inherit;min-height:initial;width:100%;position:absolute;left:0;background-color:rgba(30,41,99,0.53);">
+        <div class="d-flex align-items-center order-12" style="height:200px;">
+            <div class="container">
+                <h1 class="text-center" style="color:rgb(242,245,248);font-size:56px;font-weight:bold;font-family:Roboto, sans-serif;">{{page.title}}</h1>
+                <h3 class="text-center" style="color:rgb(242,245,248);padding-top:0.25em;padding-bottom:0.25em;font-weight:normal;">{{page.description}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="article-clean">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mt-3">
+                        <li class="breadcrumb-item " aria-current="page"><a href="{{site.baseurl}}/blog">Blog</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+                    </ol>
+                </nav>
+                <div class="intro">
+                    <p class="text-center" style="margin:26px;"><span class="date">{{page.date | date: "%-d"}} de {% include date.html %} de {{page.date | date: "%-Y"}}.</span></p>
+                </div>
+                <div class="text">
+                    {{content}}
+
+                    <p><strong>Assuntos relacionados: </strong></p>
+                    {% for categories in page.categories %}
+                    <a href="" class="btn btn-info my-1">{{categories}}</a>
+                    {% endfor %}
+
+                    <!-- Botões de compartilhamento -->
+
+                    <div class="share float-right">
+
+                        <p><strong>Compartilhe este post: </strong></p>
+
+                        <!--Facebook -->
+                        <a  href="http://www.facebook.com/sharer.php?u={{page.url | prepend: site.url}}" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+                        </a>
+
+                        <!--Twitter -->
+                        <a href="https://twitter.com/share?url={{page.url | prepend: site.url}};text={{page.title}};hashtags={{page.categories}}" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+                        </a>
+
+                        <!--LinkedIn-->
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{page.url | prepend: site.url}}" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+                        </a>
+
+
+                        <!--Google+-->
+                        <a href="https://plus.google.com/share?url={{page.url | prepend: site.url}}" target="_blank">
+                            <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="author features-blue">
+
+    <h4>Escrito por {{site.blog_author}}</h4>
+    <p class="description">Desenvolvedor web.</p>
+    <img  src="{{'/assets/img/avatar.jpg' | relative_url}}" alt="">
+    <p>Siga-me nas redes sociais: </p>
+    <ul>
+        <li><a target="_blank" href="https://www.facebook.com/jeffnts" class="fa fa-facebook"></a></li>
+        <li><a target="_blank" href="https://twitter.com/jeffnts" class="fa fa-twitter"></a></li>
+        <li><a target="_blank" href="https://www.instagram.com/jeffnts/" class="fa fa-instagram"></a></li>
+        <li><a target="_blank" href="#" class="fa fa-youtube"></a></li>
+        <li><a target="_blank" href="https://www.linkedin.com/in/jeffnts/" class="fa fa-linkedin"></a></li>
+        <li> <a target="_blank" href="https://github.com/jeffnts" class="fa fa-github mb-4"></a></li>
+    </ul>
+</div>
+
+
+
+<!-- Disqus -  Comentátrios dos posts -->
+<div class="align container">
+    <div id="disqus_thread" ></div>
+    <script>
+
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+            this.page.url = '{{site.url}}{{site.baseurl}}{{page.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = '{{page.url}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://jeffnts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+<!--
+<article class="content">
+
+
+
+<div class="align">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb mt-3">
+            <li class="breadcrumb-item " aria-current="page"><a href="{{site.baseurl}}/blog">Blog</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{page.title}}</li>
+        </ol>
+    </nav>
+    <h1 class = "title">{{page.title}}</h1>
+    <h1 class = "date">{% include date.html %}</h1>
+
+    {{content}}
+</div>
+     &lt;!&ndash; Botões de compartilhamento &ndash;&gt;
+
+    <div class="share float-right">
+
+    <p>Compartilhe este post: </p>
+
+        &lt;!&ndash; Facebook &ndash;&gt;
+        <a  href="http://www.facebook.com/sharer.php?u={{page.url | prepend: site.url}}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+        </a>
+
+        &lt;!&ndash; Twitter &ndash;&gt;
+        <a href="https://twitter.com/share?url={{page.url | prepend: site.url}};text={{page.title}};hashtags={{page.categories}}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+        </a>
+
+        &lt;!&ndash; LinkedIn &ndash;&gt;
+        <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{page.url | prepend: site.url}}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+        </a>
+
+
+        &lt;!&ndash; Google+ &ndash;&gt;
+        <a href="https://plus.google.com/share?url={{page.url | prepend: site.url}}" target="_blank">
+            <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+        </a>
+
+    </div>
+
+    &lt;!&ndash; Sobre o autor &ndash;&gt;
+
+    <div class="author">
+
+        <h4>Escrito por {{site.blog_author}}</h4>
+        <p class="description">Desenvolvedor web.</p>
+        <img src="{{'/assets/img/avatar.jpg' | relative_url}}" alt="">
+        <p>Siga-me nas redes sociais: </p>
+        <ul>
+            <li><a target="_blank" href="https://www.facebook.com/jeffnts" class="fa fa-facebook"></a></li>
+            <li><a target="_blank" href="https://twitter.com/jeffnts" class="fa fa-twitter"></a></li>
+            <li><a target="_blank" href="https://www.instagram.com/jeffnts/" class="fa fa-instagram"></a></li>
+            <li><a target="_blank" href="#" class="fa fa-youtube"></a></li>
+            <li><a target="_blank" href="https://www.linkedin.com/in/jeffnts/" class="fa fa-linkedin"></a></li>
+            <li> <a target="_blank" href="https://github.com/jeffnts" class="fa fa-github mb-4"></a></li>
+        </ul>
+    </div>
+
+    &lt;!&ndash; Disqus -  Comentátrios dos posts &ndash;&gt;
+<div class="align">
+    <div id="disqus_thread" ></div>
+    <script>
+
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+        var disqus_config = function () {
+        this.page.url = '{{site.url}}{{site.baseurl}}{{page.url}}';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = '{{page.url}}'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://jeffnts.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+</article>
+-->
