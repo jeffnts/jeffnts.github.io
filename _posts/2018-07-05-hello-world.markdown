@@ -21,6 +21,6 @@ já dizia o ditado:
 
 E como em todo começo, em programação, para não se pegar uma maldição (risos), a primeira coisa que você fizer tem que ser um 
 'hello word', assim começo. Só mais uma coisa, focarei mais em __desenvolvimento web na parte do backend__, não que não vá falar 
-sobre outras coisas... Fique à vontade para comentar, criticar, dá sugestões, e até mais...
+sobre outras coisas... Fique à vontade para comentar, criticar ou dar sugestões. E até mais...
 
 <img class = "img-fluid" src = "https://www.dhresource.com/0x0s/f2-albu-g5-M01-D9-03-rBVaI1k6Dm-AI1FtAACwE5C8ZYc231.jpg/11-4x16cm-see-ya-funny-car-styling-vinyl.jpg">
