@@ -17,7 +17,7 @@ eu possa compartilhar minhas lições aprendidas, assim tentando ajudar a quem e
 Pelo que você já leu dá pra entender do quê este blog se trata, não? Caso tenha caído aqui de paraquedas, este
 espaço será destinado ao compartilhamento de ideias sobre programação, e como tudo tem um início, aqui está, pois como 
 já dizia o ditado: 
-<blockquote> Feito é melhor que pefeito.</blockquote>
+<blockquote> Feito é melhor que perfeito.</blockquote>
 
 E como em todo começo, em programação, para não se pegar uma maldição (risos), a primeira coisa que você fizer tem que ser um 
 'hello word', assim começo. Só mais uma coisa, focarei mais em __desenvolvimento web na parte do backend__, não que não vá falar 
